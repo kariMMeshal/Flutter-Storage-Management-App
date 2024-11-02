@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <string name="app_name">FlutterLogin</string>
-  <string name="facebook_app_id">3739065109649740</string>
-  <string name="fb_login_protocol_scheme">fb3739065109649740</string>
-  <string name="facebook_client_token">450292a097d5dbfdd13d6d5406bc0bcb</string>
+  <string name="facebook_app_id">ur id </string>
+  <string name="fb_login_protocol_scheme">fb ur id</string>
+  <string name="facebook_client_token"> your Token Here </string>
 
-  <!-- <string name="fb_login_protocol_scheme">fb6a2c3194ac4eb3cd273a1b0d56d5b03f</string> -->
+
 </resources>

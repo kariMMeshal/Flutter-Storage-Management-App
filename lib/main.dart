@@ -8,10 +8,10 @@ void main() async {
     try {
       await Firebase.initializeApp(
         options: const FirebaseOptions(
-          apiKey: "AIzaSyAkNhbaX3qjfWAhmja49ejAfbp59Oz1b3M",
-          appId: "1:332720236677:android:8d3a2598c32c6c53bfa1ec",
-          messagingSenderId: "332720236677",
-          projectId: "shop-18342",
+          apiKey: " your api key goes here",
+          appId: "your app id ",
+          messagingSenderId: " ",
+          projectId: " ",
         ),
       );
     } catch (e) {
