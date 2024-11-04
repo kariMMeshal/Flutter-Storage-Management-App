@@ -6,6 +6,8 @@ class CustomDialog {
   String message;
   String title;
   DialogType dialogType;
+  String? btnOkText;
+  String? btnCancelText;
   void Function()? btnOkOnPress;
   void Function()? btnCancelOnPress;
 
@@ -16,6 +18,8 @@ class CustomDialog {
     required this.dialogType,
     this.btnOkOnPress,
     this.btnCancelOnPress,
+    this.btnOkText,
+    this.btnCancelText,
   });
 
   customDialog() {
@@ -27,6 +31,8 @@ class CustomDialog {
       desc: message,
       btnCancelOnPress: btnCancelOnPress,
       btnOkOnPress: btnOkOnPress,
+      btnOkText: btnOkText ?? "Okay",
+      btnCancelText: btnCancelText ?? "Cancel",
     ).show();
   }
 }

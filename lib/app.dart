@@ -5,6 +5,7 @@ import 'package:login_register_flutter/pages/home_page.dart';
 import 'package:login_register_flutter/pages/login_page.dart';
 import 'package:login_register_flutter/pages/register_page.dart';
 import 'package:login_register_flutter/pages/reset_pass.dart';
+import 'package:login_register_flutter/pages/update_folder.dart';
 
 class App extends StatefulWidget {
   const App({super.key});
@@ -26,6 +27,7 @@ class _AppState extends State<App> {
     // TODO: implement initState
     super.initState();
     getVerificationState();
+    print("App URL: ${Uri.base}");
   }
 
   @override

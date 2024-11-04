@@ -1,23 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:login_register_flutter/Auth_sharedwidgets/custom_buttonauth.dart';
 import 'package:login_register_flutter/Auth_sharedwidgets/custom_textfield.dart';
-import 'package:login_register_flutter/fire_store.dart/add_data_func.dart';
+import 'package:login_register_flutter/fire_store.dart/update_data.dart';
 
-class AddFolder extends StatefulWidget {
-  const AddFolder({super.key});
+class UpdateFolder extends StatefulWidget {
+  final String oldname;
+  final String docId;
+  const UpdateFolder({super.key, required this.oldname, required this.docId});
 
   @override
-  State<AddFolder> createState() => _AddFolderState();
+  State<UpdateFolder> createState() => _UpdateFolderState();
 }
 
-class _AddFolderState extends State<AddFolder> {
+class _UpdateFolderState extends State<UpdateFolder> {
   TextEditingController category = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "New Folder",
+          "Edit Folder",
           style: TextStyle(
             fontSize: 30,
             fontWeight: FontWeight.bold,
@@ -31,24 +34,25 @@ class _AddFolderState extends State<AddFolder> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const Text(
-              "Name",
+              "New Name",
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.w900,
               ),
             ),
             CustomTextfield(
-              hint: "Category Name",
+              hint: "oldName :  ${widget.oldname}",
               myController: category,
             ),
             const SizedBox(height: 20),
             CustomButtonauth(
-              title: " ADD ",
+              title: " Save ",
               iconPath: "assets/images/folder.png",
               onPressed: () {
-                AddDataFunc().addCategory(
+                UpdateData().updateCategory(
                   context: context,
-                  categoryName: category.text,
+                  id: widget.docId,
+                  newName: category.text,
                 );
               },
             ),
